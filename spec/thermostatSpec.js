@@ -53,4 +53,16 @@ describe('Thermostat', function(){
     }
     expect(thermostat.getCurrentTemperature()).toEqual(25);
   });
+
+  it('can be reset back to default temperature', function() {
+    thermostat.resetTemperature();
+    expect(thermostat.getCurrentTemperature()).toEqual(20);
+  });
+
+  it('shows low energy usage', function() {
+    for (var i = 0; i < 3; i++) {
+      thermostat.down();
+    }
+    expect(thermostat.energyUse()).toEqual('low-usage')
+  });
 });
