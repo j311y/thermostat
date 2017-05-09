@@ -24,7 +24,14 @@ describe('Thermostat', function(){
   it('has a minimum temperature of 10', function() {
     for (var i = 0; i < 11; i++) {
       thermostat.down();
-    };
+    }
     expect(thermostat.getCurrentTemperature()).toEqual(10);
+  });
+
+  it('has a maximum temperature of 32', function() {
+    for (var i = 0; i < 6; i++) {
+      thermostat.up();
+    }
+    expect(thermostat.getCurrentTemperature()).toEqual(25);
   });
 });
