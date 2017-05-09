@@ -8,6 +8,6 @@ describe('Thermostat', function(){
   });
 
   it('should start at 20 degrees', function() {
-    thermostat.temperature.toEqual(20);
+    expect(thermostat.getCurrentTemperature()).toEqual(20);
   });
 });
