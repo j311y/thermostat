@@ -35,10 +35,6 @@ describe('Thermostat', function(){
     expect(thermostat.getCurrentTemperature()).toEqual(32);
   });
 
-  // it('defaults to power save mode', function() {
-  //   expect(thermostat.powerSavingModeOn()).toBe(true)
-  // });
-
   it('can turn off power saving mode', function() {
     thermostat.powerSavingModeOff();
     expect(thermostat.powerSave).toBe(false)
