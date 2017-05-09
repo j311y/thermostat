@@ -34,4 +34,9 @@ describe('Thermostat', function(){
     }
     expect(thermostat.getCurrentTemperature()).toEqual(25);
   });
+
+  it('has a powersaving mode function', function() {
+    thermostat.powerSavingModeOn();
+    expect(thermostat.powerSave()).toBe(true)
+  });
 });
