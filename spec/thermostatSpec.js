@@ -65,9 +65,11 @@ describe('Thermostat', function(){
     }
     expect(thermostat.energyUse()).toEqual('low-usage')
   });
+
   it('shows medium energy usage', function() {
     expect(thermostat.energyUse()).toEqual('medium-usage')
   });
+  
   it('shows high energy usage', function() {
     thermostat.powerSavingModeOff();
     for (var i = 0; i < 6; i++) {
